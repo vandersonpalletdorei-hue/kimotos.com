@@ -24,13 +24,5 @@
       "src": "/(.*)",
       "dest": "kimotos/$1"
     }
-  ],
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "kimotos/$1"
-    }
   ]
 }
