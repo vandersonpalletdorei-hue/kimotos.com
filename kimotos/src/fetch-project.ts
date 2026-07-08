@@ -1,6 +1,6 @@
 async function main() {
   try {
-    const res = await fetch('https://kimotos.netlify.app/');
+    const res = await fetch('https://kimotos-rj.vercel.app/api/frete');
     const text = await res.text();
     console.log("HTML CONTENT:");
     console.log(text);
