@@ -13,15 +13,15 @@
   "routes": [
     {
       "src": "/api/shipping/calculate",
-      "dest": "api/index.ts"
+      "dest": "/api/index.ts"
     },
     {
       "src": "/api/products",
-      "dest": "api/index.ts"
+      "dest": "/api/index.ts"
     },
     {
       "src": "/api/categories",
-      "dest": "api/index.ts"
+      "dest": "/api/index.ts"
     },
     {
       "handle": "filesystem"
