@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "package.json",
+      "src": "kimotos/package.json",
       "use": "@vercel/static-build"
     }
   ],
@@ -28,7 +28,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "kimotos/$1"
     }
   ]
 }
