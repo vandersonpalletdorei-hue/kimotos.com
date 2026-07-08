@@ -5,17 +5,15 @@ require('dotenv').config();
 
 const app = express();
 
-// Ativa o CORS para aceitar as requisições vindas da sua loja na Vercel
 app.use(cors());
 app.use(express.json());
 
-// Rota do cálculo do frete
-app.post('/api/Frete', async (req, res) => {
+// ROTA AJUSTADA COM LETRA MINÚSCULA
+app.post('/api/frete', async (req, res) => {
     try {
         const { cepDestino, peso, largura, altura, comprimento } = req.body;
 
-        // SEU CÓDIGO DO MELHOR ENVIO VAI AQUI DENTRO DO TRY
-        // Exemplo temporário para teste de resposta:
+        // Seus dados do Melhor Envio rodam aqui dentro
         res.status(200).json({ 
             mensagem: "Servidor do frete respondendo perfeitamente!",
             dadosRecebidos: { cepDestino, peso }
@@ -24,12 +22,6 @@ app.post('/api/Frete', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-});
-
-// Configuração obrigatória da porta dinâmica para o Render funcionar
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(Servidor ativo na porta ${PORT});
 });
 
 module.exports = app;
