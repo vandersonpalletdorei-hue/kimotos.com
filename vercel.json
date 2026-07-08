@@ -8,14 +8,14 @@
       "use": "@vercel/static-build"
     },
     {
-      "src": "api/server.js",
+      "src": "api/index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/frete",
-      "dest": "api/server.js"
+      "src": "/api/(.*)",
+      "dest": "api/index.ts"
     },
     {
       "handle": "filesystem"
