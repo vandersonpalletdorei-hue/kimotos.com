@@ -1,11 +1,10 @@
 {
-  "name": "kimotos-loja",
+  "name": "kimotos-com",
   "version": "1.0.0",
-  "description": "Servidor e Frontend da Kimotos",
-  "main": "server.js",
+  "description": "",
+  "main": "api/server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "echo 'Sem build necessário para estáticos simples'"
+    "start": "node api/server.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
