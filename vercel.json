@@ -1,4 +1,28 @@
 {
+  "version": 2,
   "buildCommand": "cd kimotos && npm install && npm run build",
-  "outputDirectory": "kimotos/dist"
+  "outputDirectory": "kimotos/dist",
+  "builds": [
+    {
+      "src": "kimotos/package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "api/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/server.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "kimotos/$1"
+    }
+  ]
 }
