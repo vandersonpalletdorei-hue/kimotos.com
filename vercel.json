@@ -1,14 +1,4 @@
 {
   "buildCommand": "cd kimotos && npm install && npm run build",
-  "outputDirectory": "kimotos/dist",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/kimotos/$1"
-    }
-  ]
+  "outputDirectory": "kimotos/dist"
 }
